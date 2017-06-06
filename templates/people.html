@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>People</h2>
+
+<ul>
+    {% for p in people %}
+    <li><a href="/person/{{ p.id }}">{{p.name}}</a> - {{p.age}}</li>
+    {% endfor %}
+</ul>
+
+{% endblock content %}
